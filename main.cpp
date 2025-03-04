@@ -31,12 +31,13 @@ public:
 
 	bool OnUserUpdate(float fElapsedTime) override
 	{
-		// Called once per frame, draws random coloured pixels
-		for (auto p : points){
-			for(int i = 0; i<10 ; i++)
-				for(int j = 0; j<10 ; j++)
-					Draw(p.x+i, p.y+j, olc::Pixel(olc:RED));
+		// Called once per frame, draws random coloured pixels		
+		for (auto p : points) {
+			for (int i = 0; i < 10; i++)
+				for (int j = 0; j < 5; j++)
+					Draw(p.x+i, p.y+j, olc::Pixel(olc::RED));
 		}
+
 		return true;
 	}
 };
